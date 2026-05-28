@@ -5,7 +5,7 @@ import scipy.integrate as integrate
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Visualizador del Tricilindro de Steinmetz",
+    page_title="Visualizador del Tricilindro",
     page_icon="📐",
     layout="wide"
 )
@@ -43,15 +43,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Título y descripción
-st.markdown('<div class="main-title">Visualizador del Tricilindro de Steinmetz</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="description">'
-    'El tricilindro de Steinmetz es el cuerpo geométrico resultante de la intersección de tres cilindros '
-    'de igual radio cuyos ejes son mutuamente perpendiculares. Es un ejemplo clásico en el estudio de '
-    'integrales múltiples y geometría descriptiva.'
-    '</div>', 
-    unsafe_allow_html=True
-)
+st.markdown('<div class="main-title">Visualizador del Tricilindro</div>', unsafe_allow_html=True)
+
 
 # Crear columnas para organizar los controles y la visualización
 col1, col2 = st.columns([1, 2])
@@ -75,8 +68,6 @@ if calcular or radius > 0:
         st.error("⚠️ Por favor, ingresa un valor válido mayor a cero para el radio.")
     else:
         # ---- CÁLCULOS MATEMÁTICOS DE CÁLCULO MULTIVARIADO ----
-        # 1. Fórmula exacta analítica
-        vol_analitico = 8 * (2 - np.sqrt(2)) * (radius**3)
         
         # 2. Cálculo mediante Integración Numérica Real
         # Integramos la porción de 1/16 del volumen en el primer octante:
@@ -132,8 +123,8 @@ if calcular or radius > 0:
                 y=Y.flatten(),
                 z=Z.flatten(),
                 value=f_val.flatten(),
-                isomin=None,        # Renderiza todo el volumen sólido interior
-                isomax=0,           # La superficie corta exactamente en la frontera matemática 0
+                isomin=0.5,        # Renderiza todo el volumen sólido interior
+                isomax=1.0,           # La superficie corta exactamente en la frontera matemática 0
                 surface_count=1,    # Una capa superficial nítida y lisa
                 colorscale='Oranges',
                 reversescale=False,
