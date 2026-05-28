@@ -104,7 +104,7 @@ if calcular or radius > 0:
                 st.write("Integrando con respecto a $y$ obtenemos las funciones que resuelve Python en tiempo real:")
                 st.latex(r"V = 16 \left[ \int_{0}^{\frac{r}{\\sqrt{2}}} x\sqrt{r^2-x^2}\,dx + \int_{\frac{r}{\\sqrt{2}}}^{r} (r^2-x^2)\,dx \right]")
                 st.write(f"**Resultado evaluado numéricamente por la librería SciPy:**")
-                st.info(f"**$V_{\\text{{integral}}}$ = {vol_integral:.4f} unidades cúbicas**")
+                st.info(f"**$V_{{\\text{{integral}}}}$ = {vol_integral:.4f} unidades cúbicas**")
                 st.caption("¡Nota cómo el resultado de las integrales múltiples coincide con total precisión con la fórmula analítica general!")
 
         with col2:
