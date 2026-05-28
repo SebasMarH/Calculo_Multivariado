@@ -130,8 +130,8 @@ if calcular or radius > 0:
                 y=Y.flatten(),
                 z=Z.flatten(),
                 value=f_val.flatten(),
-                isomin=None,        # Renderiza todo el volumen sólido interior
-                isomax=0,           # La superficie corta exactamente en la frontera matemática 0
+                isomin=0.5,        # Renderiza todo el volumen sólido interior
+                isomax=1.0,           # La superficie corta exactamente en la frontera matemática 0
                 surface_count=1,    # Una capa superficial nítida y lisa
                 colorscale='Oranges',
                 reversescale=False,
