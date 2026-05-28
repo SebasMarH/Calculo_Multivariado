@@ -43,7 +43,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Título y descripción
-st.markdown('<div class="main-title">Visualizador del Tricilindroz</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">Visualizador del Tricilindro</div>', unsafe_allow_html=True)
 st.markdown(
     '<div class="description">'
     ''
@@ -133,16 +133,16 @@ if calcular or radius > 0:
                 isomin=0.5,        # Renderiza todo el volumen sólido interior
                 isomax=1.0,           # La superficie corta exactamente en la frontera matemática 0
                 surface_count=1,    # Una capa superficial nítida y lisa
-                colorscale='Oranges',
+                colorscale='Blues',
                 reversescale=False,
                 opacity=0.9,
                 showscale=False,
                 lighting=dict(
                     ambient=0.5,
-                    diffuse=0.8,
+                    diffuse=0.9,
                     fresnel=0.3,
                     specular=1.2,
-                    roughness=0.3
+                    roughness=0.1
                 ),
                 lightposition=dict(x=padding*2, y=padding*2, z=padding*3)
             ))
