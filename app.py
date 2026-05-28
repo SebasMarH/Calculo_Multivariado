@@ -14,7 +14,7 @@ st.set_page_config(
 st.markdown("""
     <style>
     .main-title {
-        color: #f97316;
+        color: #2563eb;
         text-align: center;
         font-size: 2.5rem;
         font-weight: 700;
@@ -27,14 +27,14 @@ st.markdown("""
         margin-bottom: 2rem;
     }
     .result-card {
-        background-color: #fff7ed;
-        border-left: 5px solid #f97316;
+        background-color: #eff6ff;
+        border-left: 5px solid #2563eb;
         padding: 1.5rem;
         border-radius: 8px;
         margin-bottom: 1.5rem;
     }
     .result-title {
-        color: #9a3412;
+        color: #1e3a8a;
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
@@ -90,7 +90,7 @@ if calcular or radius > 0:
             st.markdown('<div class="result-title">📊 Resultados del Volumen</div>', unsafe_allow_html=True)
             st.write(f"**Radio ingresado ($r$):** {radius:.4f}")
             st.write(f"**Fórmula analítica:** $V = 8(2 - \\sqrt{{2}}) \\cdot r^3$")
-            st.markdown(f"**Resultado exacto:** <span style='color:#f97316; font-weight:bold; font-size:1.2rem;'>{vol_analitico:.4f} unidades cúbicas</span>", unsafe_allow_html=True)
+            st.markdown(f"**Resultado exacto:** <span style='color:#2563eb; font-weight:bold; font-size:1.2rem;'>{vol_analitico:.4f} unidades cúbicas</span>", unsafe_allow_html=True)
             st.markdown('</div>', unsafe_allow_html=True)
             
             # Sección de explicación matemática con ecuaciones en LaTeX
